@@ -143,13 +143,13 @@ print(question_answerer)
 
 from transformers import AutoTokenizer
 
-tokenizer = AutoTokenizer.from_pretrained("my_qa_model")
+tokenizer = AutoTokenizer.from_pretrained("my_awesome_qa_model")
 inputs = tokenizer(question, context, return_tensors="pt")
 
 import torch
 from transformers import AutoModelForQuestionAnswering
 
-model = AutoModelForQuestionAnswering.from_pretrained("my_qa_model")
+model = AutoModelForQuestionAnswering.from_pretrained("my_awesome_qa_model")
 with torch.no_grad():
     outputs = model(**inputs)
     
